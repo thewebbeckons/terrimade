@@ -6,7 +6,8 @@ useHead({
   link: [
     { rel: 'icon', href: '/favicon.ico' },
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap' }
   ],
   htmlAttrs: {
     lang: 'en'
@@ -33,7 +34,7 @@ const cartOpen = ref(false)
   <UApp class="bg-canvas min-h-screen">
     <AppHeader v-model:cart-open="cartOpen" />
 
-    <main class="pt-16">
+    <main>
       <NuxtPage />
     </main>
 

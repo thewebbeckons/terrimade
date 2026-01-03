@@ -1,0 +1,144 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* Typography - Warm Minimalist/Editorial */
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&family=DM+Sans:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap');
+
+@theme static {
+  /* Typography */
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Geist Mono', 'SF Mono', Monaco, Consolas, monospace;
+
+  /* Warm Minimalist Color Palette */
+  --color-canvas: #FDFBF7;
+  --color-canvas-dark: #EAE6DF;
+  --color-ink: #3E3C38;
+  --color-ink-soft: #6B6860;
+
+  /* Sage Green Brand Color */
+  --color-sage-50: #f6f7f6;
+  --color-sage-100: #e3e7e3;
+  --color-sage-200: #c8d1c8;
+  --color-sage-300: #a3b3a3;
+  --color-sage-400: #8A9A8A;
+  --color-sage-500: #6b7d6b;
+  --color-sage-600: #556455;
+  --color-sage-700: #455245;
+  --color-sage-800: #3a433a;
+  --color-sage-900: #323932;
+  --color-sage-950: #1a1f1a;
+
+  /* Warm Neutral Tones */
+  --color-warm-50: #FDFBF7;
+  --color-warm-100: #FAF7F2;
+  --color-warm-200: #F5F0E8;
+  --color-warm-300: #EAE6DF;
+  --color-warm-400: #D4CFC5;
+  --color-warm-500: #B8B2A6;
+  --color-warm-600: #9A9385;
+  --color-warm-700: #7A7468;
+  --color-warm-800: #5C574D;
+  --color-warm-900: #3E3C38;
+  --color-warm-950: #252320;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* Paper Grain Texture Overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Float Animation for Quilts */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+  66% {
+    transform: translateY(-4px) rotate(-0.5deg);
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Utility Classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 8s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Warm Shadow Utilities */
+.shadow-warm {
+  box-shadow: 0 4px 20px -4px rgba(62, 60, 56, 0.08);
+}
+
+.shadow-warm-lg {
+  box-shadow: 0 10px 40px -8px rgba(62, 60, 56, 0.12);
+}
+
+.shadow-warm-xl {
+  box-shadow: 0 20px 60px -12px rgba(62, 60, 56, 0.15);
+}

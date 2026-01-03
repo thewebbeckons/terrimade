@@ -8,6 +8,10 @@ export default defineNuxtConfig({
     '@nuxt/scripts'
   ],
 
+  colorMode: {
+    preference: 'light'
+  },
+
   devtools: {
     enabled: true
   },

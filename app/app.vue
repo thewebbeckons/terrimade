@@ -13,8 +13,8 @@ useHead({
   }
 })
 
-const title = 'Terrimade'
-const description = 'Terrimade is an artisanal quilting studio based in Toronto, Canada'
+const title = 'Beckcraft'
+const description = 'Beckcraft is an artisanal quilting studio based in Toronto, Canada'
 
 useSeoMeta({
   title,

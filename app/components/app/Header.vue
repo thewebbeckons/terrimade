@@ -8,7 +8,7 @@ const cartCount = ref(0)
     <div class="flex items-center justify-between px-6 md:px-10 lg:px-16 py-4">
       <!-- Logo -->
       <NuxtLink to="/" class="font-serif text-2xl text-ink tracking-tight hover:text-sage-600 transition-colors">
-        Terrimade
+        Beckcraft
       </NuxtLink>
 
       <!-- Cart Button -->

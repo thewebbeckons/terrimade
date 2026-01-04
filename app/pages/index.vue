@@ -5,7 +5,7 @@
       <!-- Background Image -->
       <NuxtImg 
         src="/humber_bg.jpeg" 
-        alt="" 
+        alt="Humber River" 
         class="absolute inset-0 w-full h-full object-cover"
       />
       
@@ -17,7 +17,7 @@
       <!-- Hero Content -->
       <div class="relative z-10 text-center px-4">
         <!-- Flip Words Display -->
-        <h1 class="font-serif text-6xl md:text-8xl lg:text-9xl text-warm-50 leading-tight mb-6 animate-fade-in flex flex-col md:flex-row md:items-baseline justify-center">
+        <h1 class="font-serif text-8xl lg:text-9xl text-warm-50 leading-tight mb-6 animate-fade-in flex flex-col md:flex-row md:items-baseline justify-center">
           <FlipWords
             :words="['wood', 'quilt', 'art', 'beck']"
             :duration="2500"
